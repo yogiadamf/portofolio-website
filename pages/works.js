@@ -10,6 +10,7 @@ import thumbCita from '../public/images/works/cita.png'
 import thumbSearch from '../public/images/works/search.png'
 import thumbTraffic from '../public/images/works/sign.png'
 import thumbUi from '../public/images/works/ui.png'
+import thumbPersonal from '../public/images/works/personal.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -45,11 +46,11 @@ const Works = () => (
         </Section>
         <Section delay={0.1}>
           <WorkGridItem
-            id="citacita"
-            thumbnail={thumbCita}
-            title="App Cita-Citaku"
+            id="personal"
+            thumbnail={thumbPersonal}
+            title="Personal Portofolio"
           >
-            Application for the introduction of various kinds of ideals
+            Peronal Portofolio Website Using React JS
           </WorkGridItem>
         </Section>
       </SimpleGrid>
@@ -63,6 +64,15 @@ const Works = () => (
       </Section>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
+      <Section delay={0.5}>
+          <WorkGridItem
+            id="citacita"
+            thumbnail={thumbCita}
+            title="App Cita-Citaku"
+          >
+            Application for the introduction of various kinds of ideals
+          </WorkGridItem>
+        </Section>
         <Section delay={0.5}>
           <WorkGridItem
             id="search"
