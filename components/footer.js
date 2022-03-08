@@ -11,9 +11,9 @@ const Footer = () => {
       bg={useColorModeValue('#ffffff40', '#20202380')}
       css={{ backdropFilter: 'blur(10px)' }}
       bottom="0%"
-      padding-top="1.25rem"
-      padding-bottom="1.25rem"
       zIndex={1}
+      height={"30px"}
+      padding={"5px"}
     >
       &copy; {new Date().getFullYear()} Yogi Adam Firdaus
     </Box>
