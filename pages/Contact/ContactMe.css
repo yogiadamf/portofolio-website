@@ -65,27 +65,37 @@
 
 
   }
-  .errorMessage{
-    opacity: 0%;
-  }
   
   form label {
     margin-bottom: 5px;
     letter-spacing: 0.2rem;
   }
   
-  form input,
-  textarea {
+  form input{
     width: 100%;
     border: 2px solid rgba(0, 0, 0, 0);
     outline: none;
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
     margin-bottom: 22px;
+    color: #128c7e;
     transition: 0.3s;
     border-radius: 10px;
   }
-  
+
+  form textarea{
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    outline: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    color: #128c7e;
+    transition: 0.3s;
+    border-radius: 10px;
+  }
+
+
   textarea:focus {
     border: 2px solid rgba(30, 85, 250, 0.47);
   }
@@ -124,13 +134,18 @@
   }
   
   .footer {
-    padding-top: 400px;
+    bottom: 0%;
+    position: fixed;
+    border-top-width: 2px;
+    padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+    width: 50%;
 }
 
 .footer-text {
   text-align: center;
   font-size: 0.875rem;
+  line-height: 1.25rem;
 }
   
   @media screen and (min-width: 940px) {
@@ -161,45 +176,6 @@
       width: 100%;
       margin-bottom: 55px;
     }
-    .footer {
-      padding-top: 100px;
-      padding-bottom: 1.25rem;
-    }
   }
-  @media screen and (max-width: 375px) {
-    .footer {
-      padding-top: 450px;
-      padding-bottom: 1.25rem;
-    }
-  }
-  @media screen and (max-width: 414px) {
-    .footer {
-      padding-top: 350px;
-      padding-bottom: 1.25rem;
-    }
-  }
-  @media screen and (max-width: 390px) {
-    .footer {
-      padding-top: 400px;
-      padding-bottom: 1.25rem;
-    }
-  }
-  @media screen and (max-width: 360px) {
-    .footer {
-      padding-top: 500px;
-      padding-bottom: 1.25rem;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .footer {
-      padding-top: 300px;
-      padding-bottom: 1.25rem;
-    }
-  }
-  @media screen and (max-width: 412px) {
-    .footer {
-      padding-top: 350px;
-      padding-bottom: 1.25rem;
-    }
-  }
+
   

@@ -99,7 +99,6 @@ export default function ContactMe(props) {
               onChange={handleMessage}
               value={message}
             />
-            <span className='errorMessage'>...</span>
             {errors.message && <p>*Message field is required</p>}
 
             <div className="send-btn">

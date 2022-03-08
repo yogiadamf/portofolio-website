@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import NavBar from '../navbar'
 import { Box, Container } from '@chakra-ui/react'
 import VoxelDogLoader from '../voxel-dog-loader'
+import Footer from '../footer'
 
 const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
   ssr: false,
@@ -29,9 +30,7 @@ const Main = ({ children, router }) => {
 
         {children}
 
-        <div className="footer">
-        <p className="footer-text"> Copyright © 2022 Yogi Adam Firdaus </p>
-      </div>
+        <Footer/>
       </Container>
     </Box>
     

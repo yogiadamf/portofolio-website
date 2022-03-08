@@ -14,6 +14,17 @@ if (typeof window !== 'undefined') {
 function Website({ Component, pageProps, router }) {
   return (
     <>
+    <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}://www.googletagmanager.com/gtag/js?id=G-X1Z2S1J58Z`}
+      />
+      <Script strategy="lazyOnload">
+        {`window.dataLayer = window.dataLayer || []; 
+          function gtag(){dataLayer.push(arguments);} 
+          gtag('js', new Date()); 
+          gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});  
+        `}
+      </Script>
       <Chakra cookies={pageProps.cookies}>
         <Fonts />
         <Layout router={router}>
@@ -30,17 +41,7 @@ function Website({ Component, pageProps, router }) {
           </AnimatePresence>
         </Layout>
       </Chakra>
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-X1Z2S1J58Zhttps://www.googletagmanager.com/gtag/js?id=G-X1Z2S1J58Z`}
-      />
-      <Script strategy="lazyOnload">
-        {`window.dataLayer = window.dataLayer || []; 
-          function gtag(){dataLayer.push(arguments);} 
-          gtag('js', new Date()); 
-          gtag('config', 'G-X1Z2S1J58Z');  
-        `}
-      </Script>
+      
     </>
   )
 }
