@@ -2,4 +2,7 @@ node_modules
 .next
 dist
 .vercel
+<<<<<<< HEAD
 .env
+=======
+>>>>>>> 67fdd5c2ecbf7af7388cf22e49d3a3ec593fca11
