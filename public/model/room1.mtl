@@ -10,6 +10,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
+map_Kd textures/1K.png
 
 newmtl PC_Glass
 Ns 179.999996
@@ -20,6 +21,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
+map_Kd textures/1K.png
 
 newmtl UberTexture
 Ns 179.999996
@@ -30,3 +32,4 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
+map_Kd textures/1K.png

@@ -66,15 +66,16 @@ const VoxelDog = () => {
       camera.lookAt(target)
       setCamera(camera)
 
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
-      scene.add(ambientLight)
+      const light = new THREE.PointLight(0xffffff, 1, 100)
+      light.position.set(50, 50, 50)
+      scene.add(light)
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, '/dog.glb', {
+      loadGLTFModel(scene, '/model/room1.obj', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
