@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { loadOBJModel } from '../lib/model'
-import { GameSpinner, GameContainer } from './game-loader'
+import { loadGLTFModel } from '../lib/model'
+import { DogSpinner, DogContainer } from './voxel-dog-loader'
 
 function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
 }
 
-const Game = () => {
+const VoxelDog = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
@@ -75,7 +75,7 @@ const Game = () => {
       controls.target = target
       setControls(controls)
 
-      loadOBJModel(scene, '/model/room3.obj', {
+      loadGLTFModel(scene, '/model/room3.obj', {
         receiveShadow: true,
         castShadow: true
       }).then(() => {
@@ -123,8 +123,8 @@ const Game = () => {
   }, [renderer, handleWindowResize])
 
   return (
-    <GameContainer ref={refContainer}>{loading && <GameSpinner />}</GameContainer>
+    <DogContainer ref={refContainer}>{loading && <DogSpinner />}</DogContainer>
   )
 }
 
-export default Game
+export default VoxelDog
