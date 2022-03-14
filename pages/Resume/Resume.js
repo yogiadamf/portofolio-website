@@ -171,7 +171,7 @@ const Resume = (props) => {
       />
       <ResumeHeading
         heading="Website Reservation Caffe Sloor.in"
-        description="A website reservation and inventory management. Place and food reservation website for cafe Sloorin lamongan area
+        description="A website reservation and inventory managementA place and food reservation website for cafe sloor.in lamongan area
         with laravel framework."
       />
       <ResumeHeading
