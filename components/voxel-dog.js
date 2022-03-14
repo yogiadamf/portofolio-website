@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
@@ -24,15 +24,7 @@ const VoxelDog = () => {
   const [scene] = useState(new THREE.Scene())
   const [_controls, setControls] = useState()
 
-  const handleWindowResize = useCallback(() => {
-    const { current: container } = refContainer
-    if (container && renderer) {
-      const scW = container.clientWidth
-      const scH = container.clientHeight
-
-      renderer.setSize(scW, scH)
-    }
-  }, [renderer])
+  
 
   /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
@@ -45,7 +37,7 @@ const VoxelDog = () => {
         antialias: true,
         alpha: true
       })
-      renderer.setPixelRatio(window.devicePixelRatio)
+      renderer.setPixelRatio(devicePixelRatio)
       renderer.setSize(scW, scH)
       renderer.outputEncoding = THREE.sRGBEncoding
       container.appendChild(renderer.domElement)
@@ -114,13 +106,6 @@ const VoxelDog = () => {
       }
     }
   }, [])
-
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowResize, false)
-    return () => {
-      window.removeEventListener('resize', handleWindowResize, false)
-    }
-  }, [renderer, handleWindowResize])
 
   return (
     <DogContainer ref={refContainer}>{loading && <DogSpinner />}</DogContainer>
