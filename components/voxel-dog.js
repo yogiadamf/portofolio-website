@@ -13,7 +13,7 @@ const VoxelDog = () => {
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
-  const [target] = useState(new THREE.Vector3(-0.5, 3, 0))
+  const [target] = useState(new THREE.Vector3(-0.5, 1.5, 0))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
       20 * Math.sin(0.2 * Math.PI),
@@ -66,17 +66,19 @@ const VoxelDog = () => {
       camera.lookAt(target)
       setCamera(camera)
 
-      const ambientlight = new THREE.AmbientLight(0xcccccc ) // soft white light
+      const ambientlight = new THREE.AmbientLight(0xcccccc) // soft white light
       scene.add(ambientlight)
 
-      
+      const light = new THREE.PointLight(0xffffff, 1, 100)
+      light.position.set(50, 50, 50)
+      scene.add(light)
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, '/model/room3.obj', {
+      loadGLTFModel(scene, '/model/low.obj', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
