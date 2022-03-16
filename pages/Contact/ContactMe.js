@@ -1,16 +1,17 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useRef, useEffect } from 'react'
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form'
 import emailjs from '@emailjs/browser'
 import Typical from 'react-typical'
 import Lottie from 'lottie-web'
 import { Box, Button } from '@chakra-ui/react'
 import { EmailIcon } from '@chakra-ui/icons'
-import Swal from 'sweetalert2'
+import { useToast } from '@chakra-ui/react'
 
 export default function ContactMe(props) {
   const {
-    register,handleSubmit,
+    register,
+    handleSubmit,
     formState: { errors }
   } = useForm()
   const form = useRef()
@@ -28,9 +29,8 @@ export default function ContactMe(props) {
   const handleEmail = e => {
     setUser_email(e.target.value)
   }
-  console.log(name)
-  const onSubmit  = () => {
-
+  const toast = useToast()
+  const onSubmit = () => {
     emailjs
       .sendForm(
         'service_j1ojrij',
@@ -40,13 +40,23 @@ export default function ContactMe(props) {
       )
       .then(
         () => {
-          Swal.fire('Thank You!', 'Your Email Has Benn Sent!', 'success')
+          toast({
+            title: 'Thank You!.',
+            position: 'bottom-right',
+            description: 'Your Email Has Been Sent.',
+            status: 'success',
+            duration: 9000,
+            isClosable: true
+          })
         },
         () => {
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Something went wrong!'
+          toast({
+            title: 'Error!',
+            position: 'bottom-right',
+            description: 'Email Not Sent.',
+            status: 'error',
+            duration: 9000,
+            isClosable: true
           })
         }
       )
