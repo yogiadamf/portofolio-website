@@ -8,12 +8,12 @@ function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
 }
 
-const VoxelDog = () => {
+const Room = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
-  const [target] = useState(new THREE.Vector3(-0.5, 1.5, 0))
+  const [target] = useState(new THREE.Vector3(1, 1.5, 0))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
       20 * Math.sin(0.2 * Math.PI),
@@ -66,8 +66,8 @@ const VoxelDog = () => {
       camera.lookAt(target)
       setCamera(camera)
 
-      const ambientlight = new THREE.AmbientLight(0xcccccc) // soft white light
-      scene.add(ambientlight)
+      const light = new THREE.AmbientLight(0xcccccc) // soft white light
+      scene.add(light)
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
@@ -75,8 +75,8 @@ const VoxelDog = () => {
       setControls(controls)
 
       loadOBJModel(scene, '/model/low.obj', {
-        receiveShadow: false,
-        castShadow: false
+        receiveShadow: true,
+        castShadow: true
       }).then(() => {
         animate()
         setLoading(false)
@@ -122,8 +122,10 @@ const VoxelDog = () => {
   }, [renderer, handleWindowResize])
 
   return (
-    <RoomContainer ref={refContainer}>{loading && <RoomSpinner />}</RoomContainer>
+    <RoomContainer ref={refContainer}>
+      {loading && <RoomSpinner />}
+    </RoomContainer>
   )
 }
 
-export default VoxelDog
+export default Room

@@ -82,7 +82,7 @@ export default function ContactMe(props) {
               onChange={handleName}
               value={name}
             />
-            {errors.name && <p>*Name field is requaired</p>}
+            {errors.name && <p>*Name field is required</p>}
             <label htmlFor="email">Email</label>
             <input
               type="email"
