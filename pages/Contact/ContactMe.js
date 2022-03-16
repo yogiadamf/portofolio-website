@@ -45,7 +45,7 @@ export default function ContactMe(props) {
             position: 'bottom-right',
             description: 'Your Email Has Been Sent.',
             status: 'success',
-            duration: 9000,
+            duration: 5000,
             isClosable: true
           })
         },
@@ -55,7 +55,7 @@ export default function ContactMe(props) {
             position: 'bottom-right',
             description: 'Email Not Sent.',
             status: 'error',
-            duration: 9000,
+            duration: 5000,
             isClosable: true
           })
         }

@@ -74,14 +74,15 @@ const Room = () => {
       controls.target = target
       setControls(controls)
 
-      loadOBJModel(scene, '/model/low.obj', {
-        receiveShadow: true,
-        castShadow: true
-      }).then(() => {
-        animate()
-        setLoading(false)
-      })
-
+      setTimeout(function(){
+        loadOBJModel(scene, '/model/low.obj', {
+          receiveShadow: true,
+          castShadow: true
+        }).then(() => {
+          animate()
+          setLoading(false)
+        })
+      }, 2000)
       let req = null
       let frame = 0
       const animate = () => {
