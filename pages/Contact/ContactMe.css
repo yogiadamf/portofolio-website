@@ -141,6 +141,11 @@
     z-index: 1;
     font-size: small;
 }
+  .roomLoader {
+    top: 25%;
+    left: 25%;
+    position: absolute;
+}
   
   @media screen and (min-width: 940px) {
     .back-form {
@@ -192,6 +197,11 @@
     .footer {
       width: 90%;
     }
+    .roomLoader {
+      top: 3%;
+      left: -8%;
+      position: absolute;
+  }
   }
 
   

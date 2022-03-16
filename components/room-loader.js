@@ -1,15 +1,22 @@
 import { forwardRef } from 'react'
-import { Box, Spinner } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
+import Lottie from 'react-lottie';
+import animationData from '../pages/assets/loading.json';
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationData,
+};
 
 export const RoomSpinner = () => (
-  <Spinner
-    size="xl"
-    position="absolute"
-    left="50%"
-    top="50%"
-    ml="calc(0px - var(--spinner-size) / 2)"
-    mt="calc(0px - var(--spinner-size))"
+  <div className='roomLoader'>
+  <Lottie 
+  options={defaultOptions}
+    height={300}
+    width={300}
   />
+  </div>
 )
 
 export const RoomContainer = forwardRef(({ children }, ref) => (
