@@ -17,25 +17,25 @@ const LogoBox = styled.span`
   }
 
   &:hover img {
-    transform: rotate(20deg);
+    transform: scale(1.05);
   }
 `
 
 const Logo = () => {
-  const footPrintImg = `/images/emo${useColorModeValue('', '-dark')}.png`
+  const footPrintImg = `/images/logo${useColorModeValue('', '-dark')}.png`
 
   return (
     <Link href="/" scroll={false}>
       <a>
         <LogoBox>
-          <Image src={footPrintImg} width={20} height={20} alt="logo" />
+          <Image src={footPrintImg} width={157} height={28} alt="logo" />
           <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             fontFamily='M PLUS Rounded 1c", sans-serif'
             fontWeight="bold"
             ml={3}
           >
-            <span className='hidetext'>..</span>Yogi Adam Firdaus
+            <span className='hidetext'>....</span>
           </Text>
         </LogoBox>
       </a>
