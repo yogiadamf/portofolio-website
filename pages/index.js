@@ -102,7 +102,7 @@ const Home = () => (
           Web and mobile developer with background knowledge of React and
           Flutter framework, along with a knack of building applications with
           utmost efficiency.I am freelance in Bojonegoro with a passion for
-          building website adn application. Knack for all things launching
+          building website and application. Knack for all things launching
           products, from planning and designing all the way to solving real-life
           problems with code. When not online, I am loves playing competitive
           game.
