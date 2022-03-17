@@ -17,7 +17,7 @@ const LogoBox = styled.span`
   }
 
   &:hover img {
-    transform: scale(1.05);
+    transform: rotate(10deg);
   }
 `
 
@@ -28,15 +28,17 @@ const Logo = () => {
     <Link href="/" scroll={false}>
       <a>
         <LogoBox>
-          <Image src={footPrintImg} width={157} height={28} alt="logo" />
+          <Image src={footPrintImg} width={20} height={30} alt="logo" />
           <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             fontFamily='M PLUS Rounded 1c", sans-serif'
             fontWeight="bold"
             ml={3}
+            className="titleText"
           >
-            <span className='hidetext'>....</span>
+            ogi Adam Firdaus 
           </Text>
+          
         </LogoBox>
       </a>
     </Link>

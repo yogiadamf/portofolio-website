@@ -171,12 +171,12 @@ const Resume = (props) => {
       />
       <ResumeHeading
         heading="Website Reservation Caffe Sloor.in"
-        description="A website reservation and inventory managementA place and food reservation website for cafe sloor.in lamongan area
-        with laravel framework."
+        description="A website inventory management and place/food reservation for cafe sloor in the lamongan area
+        using laravel framework."
       />
       <ResumeHeading
         heading="Network Desaign CV. Barokah ZA"
-        description="Optimisation network desaign using cisco packet tracer"
+        description="Optimisation network design using cisco packet tracer"
       />
     </div>,
 

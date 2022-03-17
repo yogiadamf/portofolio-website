@@ -49,9 +49,10 @@
 * {
   outline: none;
 }
-.hidetext{
-  opacity: 0%;
+.titleText{
+  margin-left: -4px;
 }
+
 .resume-container {
     display: flex;
     align-items: center;
