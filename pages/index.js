@@ -16,8 +16,7 @@ import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import {
-  IoLogoTwitter,
+import {  
   IoLogoInstagram,
   IoLogoGithub,
   IoLogoFacebook,
@@ -48,14 +47,12 @@ const Home = () => (
           loop={Infinity}
           steps={[
             'Hello, I am Yogi Adam Firdaus',
-            1000,
-            'Enthusiatic Dev 😎',
-            1000,
+            1000,            
             'Front End Developer 💻',
             1000,
             'UI & UX Design 📱',
             1000,
-            'React JS/Flutter Dev 🌐',
+            'React JS/Laravel Dev 🌐',
             1000
           ]}
         />
@@ -66,7 +63,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Yogi Adam Firdaus
           </Heading>
-          <p>Freelance ( Website and App Develloper )</p>
+          <p>Website Develloper</p>
         </Box>
         <Box
           flexShrink={0}
@@ -99,13 +96,12 @@ const Home = () => (
           Bio
         </Heading>
         <Paragraph>
-          Web and mobile developer with background knowledge of React and
-          Flutter framework, along with a knack of building applications with
+          Web developer with background knowledge of React and
+          Laravel framework, along with a knack of building applications with
           utmost efficiency.I am freelance in Bojonegoro with a passion for
-          building website and application. Knack for all things launching
+          building website. Knack for all things launching
           products, from planning and designing all the way to solving real-life
-          problems with code. When not online, I am loves playing competitive
-          game.
+          problems with code.
         </Paragraph>
       </Section>
 
@@ -129,7 +125,7 @@ const Home = () => (
         </Paragraph>
         <Paragraph>
           I like to challenge my reflexes a lot while competing in football
-          games, pushing the rank and having interactive gaming sessions excites
+          games, push rank and having interactive gaming sessions excites
           me the most.
         </Paragraph>
       </Section>
@@ -163,18 +159,7 @@ const Home = () => (
                 Yogi Aadam Firdadus
               </Button>
             </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/yogiadamf19" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                yogiadamf19
-              </Button>
-            </Link>
-          </ListItem>
+          </ListItem>          
           <ListItem>
             <Link
               href="https://www.instagram.com/yogiadamfirdaus/"

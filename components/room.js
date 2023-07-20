@@ -82,7 +82,7 @@ const Room = () => {
           animate()
           setLoading(false)
         })
-      }, 2000)
+      })
       let req = null
       let frame = 0
       const animate = () => {
