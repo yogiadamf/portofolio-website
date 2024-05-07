@@ -16,12 +16,7 @@ import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import {
-  IoLogoInstagram,
-  IoLogoGithub,
-  IoLogoFacebook,
-  IoLogoLinkedin
-} from 'react-icons/io5'
+import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import thumbYouTube from '../public/images/links/you.png'
 import thumbWa from '../public/images/wa.png'
 import Image from 'next/image'
@@ -96,11 +91,11 @@ const Home = () => (
           Bio
         </Heading>
         <Paragraph>
-          I'm a passionate frontend developer with a keen interest in crafting
+          I&apos;m a passionate frontend developer with a keen interest in crafting
           engaging user experiences. My journey in web development began with
           HTML, CSS, and vanilla JavaScript, but I quickly found myself drawn to
           modern frameworks like React. Leveraging its component-based
-          architecture, I've built dynamic and responsive interfaces that bring
+          architecture, I&apos;ve built dynamic and responsive interfaces that bring
           ideas to life.
         </Paragraph>
       </Section>
